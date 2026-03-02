@@ -48,13 +48,29 @@ This will generate the Prisma Client automatically and create the necessary `Con
    - Add `DATABASE_URL` pointing to your Render Postgres instance (e.g. Internal Database URL).
 4. **Build Command**: 
    ```bash
-   npm install && npx prisma generate && npx prisma migrate deploy && npm run build
+   npm install && npm run build:render
    ```
 5. **Start Command**: 
    ```bash
    npm start
    ```
-6. Render will build and deploy your service, automatically running migrations on deploy.
+6. Render will build and deploy your service, automatically running `npx prisma db push` to synchronize the database schema.
+
+## Testing with Postman (Deployed API)
+
+1. Open Postman and create a new request.
+2. Set the method to **POST**.
+3. Enter your assigned Render URL appended with `/identify` (e.g., `https://bitespeed-api-xyz.onrender.com/identify`).
+4. Under the URL bar, go to the **Body** tab.
+5. Select **raw** and choose **JSON** from the dropdown menu.
+6. Paste the following JSON:
+   ```json
+   {
+     "email": "mcfly@hillvalley.edu",
+     "phoneNumber": "123456"
+   }
+   ```
+7. Click **Send** to receive the 200 OK JSON response.
 
 ## Example Request
 
