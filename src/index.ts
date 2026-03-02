@@ -16,6 +16,10 @@ app.get('/health', (req, res) => {
     res.status(200).json({ status: 'ok' });
 });
 
+app.get('/', (req, res) => {
+    res.status(200).json({ message: 'BiteSpeed Identity Reconciliation API is running. Use POST /identify' });
+});
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
