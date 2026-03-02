@@ -60,7 +60,7 @@ This will generate the Prisma Client automatically and create the necessary `Con
 
 1. Open Postman and create a new request.
 2. Set the method to **POST**.
-3. Enter your assigned Render URL appended with `/identify` (e.g., `https://bitespeed-api-xyz.onrender.com/identify`).
+3. Enter your assigned Render URL appended with `/identify` (e.g., `https://bitespeed-api-7p7t.onrender.com/identify`).
 4. Under the URL bar, go to the **Body** tab.
 5. Select **raw** and choose **JSON** from the dropdown menu.
 6. Paste the following JSON:
